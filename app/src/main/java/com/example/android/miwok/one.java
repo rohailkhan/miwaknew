@@ -26,7 +26,7 @@ public class one extends AppCompatActivity {
         words.add(new wordjava("one" ,"one" ,"one"));
         words.add(new wordjava("two" ,"two" , "two"));
 
-        Ar
+        WordAdapter myadapter=new WordAdapter(this,words);
 
 
 

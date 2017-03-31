@@ -8,6 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:text="one"
+        android:id="@+id/one"
         tools:textSize="20dp"
         tools:textColor="@color/category_colors"/>
     <TextView
