@@ -18,7 +18,8 @@ import java.util.List;
  */
 
 public class WordAdapter extends ArrayAdapter<wordjava> {
-
+//public WordAdapter(@NonNull Context context,int resouce, ArrayList<wordjava> words)
+    //our getView method will inflate the view .We dont need the default resouce of super class
     public WordAdapter(@NonNull Context context, ArrayList<wordjava> words) {
         super(context, 0, words);
     }
@@ -33,6 +34,11 @@ public class WordAdapter extends ArrayAdapter<wordjava> {
         // Get the {@link Word} object located at this position in the list
         wordjava currentWord = getItem(position);
         TextView onetext=(TextView)myview.findViewById(R.id.one);
-        return super.getView(position, convertView, parent);
+        TextView twotext=(TextView)myview.findViewById(R.id.two);
+        TextView threetext=(TextView)myview.findViewById(R.id.three);
+        onetext.setText(currentWord.getArabic());
+        twotext.setText(currentWord.getTranslation());
+        threetext.setText(currentWord.getReference());
+        return myview;
     }
 }

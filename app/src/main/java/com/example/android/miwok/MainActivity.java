@@ -38,5 +38,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(oneIntent);
             }
         });
+        final TextView twoText=(TextView)findViewById(R.id.family);
+        twoText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent twointent=new Intent(MainActivity.this,two.class);
+                startActivity(twointent);
+            }
+        });
     }
 }
